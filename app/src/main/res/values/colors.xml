@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_color_app">#ED3237</color>
+    <color name="background_fragment_main">#E5E5E5</color>
 </resources>
