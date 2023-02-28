@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AboutFragment">
+
+    <TextView
+        android:id="@+id/tv_fragment_title_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/fragment_about_title"
+        android:textAllCaps="true"
+        android:textColor="#2B2B3D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_fragment_about"
+        android:layout_width="32dp"
+        android:layout_height="3dp"
+        android:background="@drawable/ic_rectangle"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_title_about"
+        app:layout_constraintStart_toStartOf="@+id/tv_fragment_title_about"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/view_fragment_about"
+        app:layout_constraintStart_toStartOf="@+id/tv_fragment_title_about"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:padding="4dp"
+        android:text="@string/fragment_about_text"
+        android:fontFamily="@font/inter_light"
+        android:textColor="#2B2B3D"
+        android:textSize="16sp"
+        android:lineSpacingExtra="4sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
