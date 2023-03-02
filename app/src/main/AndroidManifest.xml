@@ -12,6 +12,7 @@
         android:theme="@style/Theme.QuakeAlertApp"
         tools:targetApi="31">
         <activity
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

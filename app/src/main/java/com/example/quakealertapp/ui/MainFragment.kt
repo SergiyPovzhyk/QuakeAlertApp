@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.quakealertapp.R
 
-class MainFragment : Fragment() {
+class MainFragment :Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

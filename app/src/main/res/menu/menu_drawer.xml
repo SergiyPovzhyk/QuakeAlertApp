@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_main_item"
+            android:title="@string/fragment_main_title"
+            android:icon="@drawable/ic_home"/>
+        <item
+            android:id="@+id/menu_recommend_item"
+            android:title="@string/fragment_recommend_title"
+            android:icon="@drawable/ic_book"/>
+        <item
+            android:id="@+id/menu_about_item"
+            android:title="@string/fragment_about_title"
+            android:icon="@drawable/ic_info"/>
+    </group>
+
+
+</menu>
