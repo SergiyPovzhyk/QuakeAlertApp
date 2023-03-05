@@ -22,4 +22,8 @@
 Перевірте, чи немає поблизу постраждалих, сповістіть про них рятувальників та, по можливості, надайте допомогу</string>
     <string name="intensity">Інтенсивність</string>
     <string name="quantity">Величина</string>
+    <string name="fragment_main_title">Головна</string>
+    <string name="earthquake">ЗЕМЛЕТРУСИ</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
 </resources>
