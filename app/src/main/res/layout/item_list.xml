@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="378dp"
+    android:layout_width="match_parent"
     android:layout_height="168dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
@@ -75,8 +75,8 @@
         android:layout_width="1dp"
         android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="@id/tv_quantity"
-        app:layout_constraintStart_toEndOf="@+id/tv_number_intensity"
-        android:layout_marginStart="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/ic_line"/>
 
     <TextView
@@ -84,25 +84,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/tv_intensity"
-        app:layout_constraintStart_toEndOf="@+id/view_item_list"
+        app:layout_constraintStart_toStartOf="@+id/view_item_list"
+        android:layout_marginStart="50dp"
         android:text="@string/quantity"
         android:fontFamily="@font/inter_light"
-        android:layout_marginStart="24dp"
+
         android:textSize="12sp"
         android:textColor="#2B2B3D"
-        android:alpha="0.5"/>
+        android:alpha="0.5"
+        />
+
     <TextView
         android:id="@+id/tv_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/tv_number_intensity"
-        app:layout_constraintStart_toStartOf="@+id/tv_size"
+        app:layout_constraintStart_toStartOf="@+id/view_item_list"
         tools:text = "1.0"
         android:textSize="18sp"
         android:fontFamily="@font/inter_bold"
         android:textColor="#2B2B3D"
         app:drawableStartCompat="@drawable/ic_waves"
         android:drawablePadding="10dp"
+        android:layout_marginStart="50dp"
         />
 
 
