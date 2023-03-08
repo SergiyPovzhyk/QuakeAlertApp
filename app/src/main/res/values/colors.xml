@@ -10,4 +10,9 @@
     <color name="main_color_app">#ED3237</color>
     <color name="background_fragment_main">#E5E5E5</color>
     <color name="background_toolbar">#F5F5F5</color>
+    <color name="enum_barely_noticeable">#8ACB79</color>
+    <color name="enum_weak">#73C7B3</color>
+    <color name="enum_medium">#EEC800</color>
+    <color name="enum_strong">#F87F28</color>
+    <color name="enum_very_strong">#ED3237</color>
 </resources>

@@ -26,4 +26,9 @@
     <string name="earthquake">ЗЕМЛЕТРУСИ</string>
     <string name="close">Close</string>
     <string name="open">Open</string>
+    <string name="enum_barely_noticeable">ЛЕДЬ ВІДЧУТНИЙ</string>
+    <string name="enum_weak">СЛАБКИЙ</string>
+    <string name="enum_medium">СЕРЕДНІЙ</string>
+    <string name="enum_strong">СИЛЬНИЙ</string>
+    <string name="enum_very_strong">ДУЖЕ СИЛЬНИЙ</string>
 </resources>
