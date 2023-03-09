@@ -31,4 +31,6 @@
     <string name="enum_medium">СЕРЕДНІЙ</string>
     <string name="enum_strong">СИЛЬНИЙ</string>
     <string name="enum_very_strong">ДУЖЕ СИЛЬНИЙ</string>
+    <string name="first_recommendation">первинні рекомендації</string>
+    <string name="text_wait">зачекай</string>
 </resources>
