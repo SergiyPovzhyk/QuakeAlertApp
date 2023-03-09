@@ -94,6 +94,7 @@ class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewH
 
 
         private fun initTime(itemFeature: Feature) {
+
             val timeStr = itemFeature.properties.time
             val timestamp = Instant.parse(timeStr)
             val zone: ZoneId = ZoneId.of("Europe/Paris")
@@ -102,8 +103,8 @@ class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewH
             val period = Period.between(date,currentDate).days
             when(period){
                 0 -> tvTimeAgo?.text = "Сьогодні"
-                1 -> tvTimeAgo?.text = "$period день тому"
-                2,3,4 -> tvTimeAgo?.text = "$period дні тому "
+                1,21,31,41,51,61 -> tvTimeAgo?.text = "$period день тому"
+                2,3,4,22,23,24,32,33,34,42,43,44 -> tvTimeAgo?.text = "$period дні тому "
                 else -> tvTimeAgo?.text = "$period днів тому"
             }
 
