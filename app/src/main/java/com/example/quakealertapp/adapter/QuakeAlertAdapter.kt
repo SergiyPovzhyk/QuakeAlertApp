@@ -1,5 +1,7 @@
 package com.example.quakealertapp.adapter
 
+import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,9 +17,8 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.Period
 import java.time.ZoneId
-import java.util.*
 
-class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewHolder>() {
+class QuakeAlertAdapter(val itemClickListener: (ArrayList<String?>) -> Unit):RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewHolder>() {
 
     var listData :List<Feature> = emptyList()
     fun setQuakeAlert(list:List<Feature>){
@@ -39,6 +40,11 @@ class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewH
 
     override fun onBindViewHolder(holder: QuakeAlertViewHolder, position: Int) {
         holder.bind(listData[position])
+        holder.itemView.setOnClickListener {
+            val listWithData = arrayListOf<String?>(holder.tvTimeAgo?.text.toString(),holder.tvMapSearching?.text.toString(),
+                holder.tvQuantity?.text.toString(),holder.tvNumberIntensity?.text.toString())
+            itemClickListener(listWithData)
+        }
     }
 
     class QuakeAlertViewHolder(itemView:View):RecyclerView.ViewHolder(itemView) {
@@ -58,13 +64,6 @@ class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewH
         }
 
         fun bind(itemFeature: Feature){
-//            val magnitude = itemFeature.properties.magnitude
-//            tvMapSearching?.text = itemFeature.properties.locality
-//            tvQuantity?.text = String.format("%.1f",magnitude)
-//            tvTimeAgo?.text = itemFeature.properties.time
-//            val magn = Magnitude.getMagnitude(magnitude)
-//            tvNumberIntensity?.text = magn.title.toString()
-//            tvNumberIntensity?.background = magn.color.toDrawable()
             initTime(itemFeature)
             initMagnitude(itemFeature)
             initIntensity(itemFeature)
@@ -107,7 +106,6 @@ class QuakeAlertAdapter():RecyclerView.Adapter<QuakeAlertAdapter.QuakeAlertViewH
                 2,3,4,22,23,24,32,33,34,42,43,44 -> tvTimeAgo?.text = "$period дні тому "
                 else -> tvTimeAgo?.text = "$period днів тому"
             }
-
         }
     }
 }
